@@ -14,6 +14,8 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 
 * #### OAuth2 Authentication
 
+Integrates OAuth2 authentication for seamless user authentication through popular social media platforms.
+
 
 
 
