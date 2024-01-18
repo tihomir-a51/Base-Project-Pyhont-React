@@ -27,7 +27,8 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 * #### Retrieve User Image - Retrieves the photo or logo associated with a specific user.
 
 
-## Database - as this is a Base Project, currently there is only one table in the relational database:
+## Database
+As this is a Base Project, currently there is only one table in the relational database:
 
 <img width="259" alt="Screenshot 2024-01-18 at 20 52 46" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/b9a9e19b-c16d-41bb-8524-3d6f13a1ddac">
 
