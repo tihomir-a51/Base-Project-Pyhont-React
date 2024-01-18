@@ -39,10 +39,10 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 
     pip install -r requirements.txt
 
-    Windows
+    Windows:
     .\venv\Scripts\activate 
 
-    MacOS / Linux
+    MacOS / Linux:
     source venv/bin/activate
 
 3. Configure environment variables for email, OAuth2, JWT, and database settings
