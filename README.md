@@ -27,14 +27,16 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 * #### Retrieve User Image - Retrieves the photo or logo associated with a specific user.
 
 
-### `npm test`
+## Installation
 
+1. Clone the repository to your local machine
 
+2. Create virtual environment and install the dependencies for the project (requirements.txt)
 
-### `npm run build`
+3. Configure environment variables for email, OAuth2, JWT, and database settings
 
+4. Set up preferred database connection
 
+5. Start the application server
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. Start the React Front End 
