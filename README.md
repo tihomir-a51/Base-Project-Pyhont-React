@@ -55,7 +55,7 @@ As this is a Base Project, currently there is only one table in the relational d
 
 1. Clone the repository to your local machine
 
-    git clone https://github.com/tihomir-a51/Base-Project-Pyhont-React.git
+  git clone https://github.com/tihomir-a51/Base-Project-Pyhont-React.git
 
 2. Create virtual environment and install the dependencies for the project (requirements.txt)
 
@@ -88,21 +88,21 @@ As this is a Base Project, currently there is only one table in the relational d
 
 3. Configure environment variables for email, OAuth2, JWT, and database settings
 
-File dotenv.env should be created locally in root directory and it is ignored in .gitignore. The file is mandatory and example for it can be seen below:
+  File dotenv.env should be created locally in root directory and it is ignored in .gitignore. The file is mandatory and example for it can be seen below:
 
 <img width="863" alt="Screenshot 2024-01-18 at 21 25 54" src="https://github.com/tihomir-a51/Base-Project-Python-React/assets/138571393/7bf83b8f-9044-4482-9f83-2815e2ef4ebf">
     
 4. Set up preferred database connection
 
-    The link to the proffered database should be written in .env_example file (see above). In config.py file is established "dummy" connection for security reason, all the information will be provided from dotenv.env file and retrieved via SettingsConfigDict class from pydantic_settings
+  The link to the proffered database should be written in .env_example file (see above). In config.py file is established "dummy" connection for security reason, all the information will be provided from dotenv.env file and retrieved via SettingsConfigDict class from pydantic_settings
 
 5. Start the application server
 
-    Simply run the file run_server.py
+  Simply run the file run_server.py
 
 6. Start the React Front End - keep in mind that this part of the Base-Project-Python-React is still under construction 
 
-    npm start BaseProject_PythonReact
+  npm start BaseProject_PythonReact
 
 
 ## Usage Examples 
