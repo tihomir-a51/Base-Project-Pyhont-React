@@ -85,9 +85,10 @@ As this is a Base Project, currently there is only one table in the relational d
     pip list
     ```
  
- 
 
 3. Configure environment variables for email, OAuth2, JWT, and database settings
+
+File dotenv.env should be created locally in root directory and it is ignored in .gitignore. The file is mandatory and example for it can be seen below:
 
 <img width="863" alt="Screenshot 2024-01-18 at 21 25 54" src="https://github.com/tihomir-a51/Base-Project-Python-React/assets/138571393/7bf83b8f-9044-4482-9f83-2815e2ef4ebf">
     
