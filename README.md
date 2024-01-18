@@ -19,6 +19,8 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 
 * #### OAuth2 Authentication - Integrates OAuth2 authentication for seamless user authentication through popular social media platforms. Users can sign in using their existing accounts on supported OAuth2 providers.
 
+  <img width="1417" alt="Screenshot 2024-01-18 at 21 13 55" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/6923cb0a-cc48-4d23-aada-1bc37af7d25c">
+
 * #### JSON Web Tokens (JWT) - Utilizes JWT for secure and stateless user authentication. JWT tokens are issued upon successful authentication and used to authorize access to protected resources.
 
 * #### Create Users - Allows the creation of new user profiles with required details. After successful registration, Users will receive verification email. To verify the account, Users should go to their email and follow the instructions. Usega sample
