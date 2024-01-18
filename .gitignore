@@ -7,4 +7,3 @@ __pycache__/
 .coverage
 /tests/test.db
 /.python-version
-dotenv.env
