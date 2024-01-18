@@ -57,6 +57,12 @@ Here are some of the features of Base-Project-Python-React but not limited to:
     
 4. Set up preferred database connection
 
+    The link to the proffered database should be written in .env_example file (see above). In config.py file is established "dummy" connection for security reason, all the information will be provided from dotenv.env file and retrieved via SettingsConfigDict class from pydantic_settings
+
 5. Start the application server
 
-6. Start the React Front End 
+    Simply run the file run_server.py
+
+6. Start the React Front End - keep in mind that this part of the Base-Project-Python-React is still under construction 
+
+    npm start BaseProject_PythonReact
