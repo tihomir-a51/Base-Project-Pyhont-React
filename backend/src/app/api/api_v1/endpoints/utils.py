@@ -8,11 +8,14 @@ from sqlalchemy.orm import Session
 
 from app.core.hashing import very_token
 from app.db.database import get_db
+from app.core.config import settings
+
 
 
 router = APIRouter()
 
-templates = Jinja2Templates(directory='backend/src/app/templates')  # this path depends on your root folder
+templates = Jinja2Templates(directory=settings.TEMPLATE_ROOT)  # this path depends on your root folder =>
+# for example "backend/src/app/templates" if BaseProject_PythonReact is root directory
 
 
 @router.get('/verification', response_class=HTMLResponse, include_in_schema=False)

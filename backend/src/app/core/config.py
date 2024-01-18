@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     MAIL_PASSWORD: str = Field(default='dummy', json_schema_extra={'env': 'MAIL_PASSWORD'})
     MAIL_SERVER: str = Field(default='dummy', json_schema_extra={'env': 'MAIL_SERVER'})
     VALIDATE_CERTS: bool = Field(default=False, json_schema_extra={'env': 'VALIDATE_CERTS'})
+    TEMPLATE_ROOT: str = Field(default='dummy', json_schema_extra={'env': 'MAIL_SERVER'})
 
     model_config = SettingsConfigDict(env_file='dotenv.env', extra='allow')
 
