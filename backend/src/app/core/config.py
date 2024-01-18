@@ -7,7 +7,6 @@ from pydantic import Field
 class Settings(BaseSettings):
     PROJECT_NAME: str = 'Base Project'
     DB_URL: str = Field(default='mysql+pymysql://dummy/base_project', json_schema_extra={'env': 'DB_URL'})
-    # DB_URL: str = 'mysql+pymysql://root:6748@localhost/base_project' 
     ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(default=30, json_schema_extra={'env': 'ACCESS_TOKEN_EXPIRE_MINUTES'})
     EMAIL_TOKEN_EXPIRE_MINUTES: int = Field(default=30, json_schema_extra={'env': 'EMAIL_TOKEN_EXPIRE_MINUTES'})
     ALGORITHM: str = Field(default='HS256', json_schema_extra={'env': 'ALGORITHM'})
