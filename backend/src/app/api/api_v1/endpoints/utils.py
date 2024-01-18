@@ -12,7 +12,7 @@ from app.db.database import get_db
 
 router = APIRouter()
 
-templates = Jinja2Templates(directory='app/templates')
+templates = Jinja2Templates(directory='src/app/templates')
 
 
 @router.get('/verification', response_class=HTMLResponse, include_in_schema=False)

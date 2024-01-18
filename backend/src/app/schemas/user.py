@@ -29,6 +29,7 @@ class UserCreate(BaseModel):
 
 
 class UserDisplay(BaseModel):
+    id: str
     username: str
     first_name: str
     last_name: str
