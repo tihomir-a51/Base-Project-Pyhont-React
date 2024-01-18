@@ -1,0 +1,9 @@
+.idea
+__pycache__/
+.vscode
+*.egg-info/
+*.env
+/tests/api_v1/endpoints/.pytest_cache/
+.coverage
+/tests/test.db
+/.python-version

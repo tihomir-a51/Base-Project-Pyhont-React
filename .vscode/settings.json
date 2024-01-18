@@ -1,0 +1,16 @@
+{
+    "cSpell.words": [
+        "passlib",
+        "templating",
+        "uvicorn"
+    ],
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    // "python.defaultInterpreterPath": "./src",
+    // "python.testing.cwd": "./src",
+    // "python.testing.pytestArgs": ["./src"],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+    
+}
