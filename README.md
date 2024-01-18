@@ -12,9 +12,10 @@ This project serves as a foundational base for web applications, providing essen
 
 Here are some of the features of Base-Project-Python-React but not limited to:
 
-* #### OAuth2 Authentication
+* #### OAuth2 Authentication - Integrates OAuth2 authentication for seamless user authentication through popular social media platforms. Users can sign in using their existing accounts on supported OAuth2 providers
 
-Integrates OAuth2 authentication for seamless user authentication through popular social media platforms.
+* #### JSON Web Tokens (JWT) - Utilizes JWT for secure and stateless user authentication. JWT tokens are issued upon successful authentication and used to authorize access to protected resources.
+
 
 
 
