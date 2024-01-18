@@ -10,6 +10,12 @@ This project serves as a foundational base for web applications, providing essen
 
 ## Features
 
+Here are some of the features of Base-Project-Python-React but not limited to:
+
+### OAuth2 Authentication
+
+
+
 
 
 
