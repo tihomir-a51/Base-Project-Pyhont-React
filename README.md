@@ -60,21 +60,32 @@ As this is a Base Project, currently there is only one table in the relational d
 2. Create virtual environment and install the dependencies for the project (requirements.txt)
 
     * Create virtual environment:
+
     ```bash
     python -m venv venv
     ```
     * Activate virtual environment for Windows:
-      -> .\venv\Scripts\activate 
 
+    ```bash
+    .\venv\Scripts\activate 
+    ```
     * Activate virtual environment for MacOS / Linux:
-      -> source venv/bin/activate
 
+    ```bash
+    source venv/bin/activate
+    ```
     * Installing dependencies:
-      -> pip install -r requirements.txt
 
+    ```bash
+    pip install -r requirements.txt
+    ```
     * Display all dependencies:
-      -> pip list
 
+    ```bash
+    pip list
+    ```
+ 
+ 
 3. Configure environment variables for email, OAuth2, JWT, and database settings
 
 <img width="863" alt="Screenshot 2024-01-18 at 21 25 54" src="https://github.com/tihomir-a51/Base-Project-Python-React/assets/138571393/7bf83b8f-9044-4482-9f83-2815e2ef4ebf">
