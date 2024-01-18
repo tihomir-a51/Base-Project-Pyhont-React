@@ -115,7 +115,7 @@ As this is a Base Project, currently there is only one table in the relational d
     Testing framework is pytest. Soon as the whole backend logic is implemented, the test will be provided with usage instructions 
 
 
-## COntributing
+## Contributing
 
     Contributions are welcome! 
 
