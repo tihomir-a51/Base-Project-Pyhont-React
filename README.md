@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-## Project description
+## Project Overview
 
 This project serves as a foundational base for web applications, providing essential features such as email verification, OAuth2 authentication, a basic front end built with React, and a sample connection to a database. Whether you're starting a new project or looking to integrate these fundamental functionalities into an existing one, this base project can significantly accelerate your development process.
 
@@ -66,3 +66,12 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 6. Start the React Front End - keep in mind that this part of the Base-Project-Python-React is still under construction 
 
     npm start BaseProject_PythonReact
+
+
+## COntributing
+
+Contributions are welcome! 
+
+## License
+
+This project is licensed under the MIT License.
