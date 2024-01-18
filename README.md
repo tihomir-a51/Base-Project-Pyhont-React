@@ -31,8 +31,12 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 
 1. Clone the repository to your local machine
 
+    git clone https://github.com/tihomir-a51/Base-Project-Pyhont-React.git
+
 2. Create virtual environment and install the dependencies for the project (requirements.txt)
 
+    pip install -r requirements.txt
+    
 3. Configure environment variables for email, OAuth2, JWT, and database settings
 
 4. Set up preferred database connection
