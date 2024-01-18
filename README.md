@@ -60,8 +60,9 @@ As this is a Base Project, currently there is only one table in the relational d
 2. Create virtual environment and install the dependencies for the project (requirements.txt)
 
     * Create virtual environment:
-      -> python -m venv venv
-
+    ```bash
+    python -m venv venv
+    ```
     * Activate virtual environment for Windows:
       -> .\venv\Scripts\activate 
 
