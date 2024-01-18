@@ -16,15 +16,25 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 
 * #### JSON Web Tokens (JWT) - Utilizes JWT for secure and stateless user authentication. JWT tokens are issued upon successful authentication and used to authorize access to protected resources.
 
-* #### Create Users - Allows the creation of new user profiles with required details. After successful registration, Users will receive verification email. To verify the account, Users should go to their email and follow the instructions.
+* #### Create Users - Allows the creation of new user profiles with required details. After successful registration, Users will receive verification email. To verify the account, Users should go to their email and follow the instructions. Usega sample
 
-* #### Retrieve all verified users - Retrieves a list of all users stored in the database. Currently, there is no admin restrictions who can access this information. It depends of the project future logic.
+  <img width="1434" alt="Screenshot 2024-01-18 at 21 04 47" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/ba3dc0e5-8a46-468c-98e7-ace1857f886a">
 
-* #### Delete User - Enables the removal of user profiles from the system. In fact, it is implemented via soft deletion - there is a flag in the database that flags user as deleted but it is not removed from database. This will prevent any information lost of security breach. User flagged as deleted in database will no longer shown in any searches and the account will be blocked. 
+* #### Retrieve all verified users - Retrieves a list of all users stored in the database. Currently, there is no admin restrictions who can access this information. It depends of the project future logic. Usage sample
+  
+<img width="1426" alt="Screenshot 2024-01-18 at 21 05 42" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/646285bd-65da-4312-b4a2-41221bda5835">
 
-* #### Upload User Image - Users can upload and associate a photo or logo with their profiles. Currently, there is no restrictions on picture size but this can be easily implemented depending of the project.
+* #### Delete User - Enables the removal of user profiles from the system. In fact, it is implemented via soft deletion - there is a flag in the database that flags user as deleted but it is not removed from database. This will prevent any information lost of security breach. User flagged as deleted in database will no longer shown in any searches and the account will be blocked. Usage sample:
 
-* #### Retrieve User Image - Retrieves the photo or logo associated with a specific user.
+  <img width="1417" alt="Screenshot 2024-01-18 at 21 06 11" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/160de18b-cfd3-4980-a5c8-806455709878">
+
+* #### Upload User Image - Users can upload and associate a photo or logo with their profiles. Currently, there is no restrictions on picture size but this can be easily implemented depending of the project. Usage sample:
+
+<img width="1417" alt="Screenshot 2024-01-18 at 21 07 15" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/81f3eb62-d0d8-416b-8cb5-fbcf34a6c3cc">
+
+* #### Retrieve User Image - Retrieves the photo or logo associated with a specific user. Usage Sample
+  
+<img width="1417" alt="Screenshot 2024-01-18 at 21 07 31" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/e3a1f244-7a21-4d22-b1c9-2dac105c093b">
 
 
 ## Database
@@ -81,6 +91,8 @@ As this is a Base Project, currently there is only one table in the relational d
 
 
 ## Usage Examples 
+
+<img width="1434" alt="Screenshot 2024-01-18 at 21 04 47" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/ba3dc0e5-8a46-468c-98e7-ace1857f886a">
 
 
 ## Backend testing
