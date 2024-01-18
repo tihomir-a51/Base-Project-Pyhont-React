@@ -8,6 +8,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This project serves as a foundational base for web applications, providing essential features such as email verification, OAuth2 authentication, a basic front end built with React, and a sample connection to a database. Whether you're starting a new project or looking to integrate these fundamental functionalities into an existing one, this base project can significantly accelerate your development process.
 
 
+## Interactive API documentation
+
+<img width="1428" alt="Screenshot 2024-01-18 at 20 59 18" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/f4a55fe7-7259-434c-8804-858c94ad4bfb">
+
+
 ## Features
 
 Here are some of the features of Base-Project-Python-React but not limited to:
@@ -42,11 +47,6 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 As this is a Base Project, currently there is only one table in the relational database. Keep in mind that picture / logo of the user should be kept in database as BLOB (if you are using MariaDB) but this may vary depending on the database (PostgreSQL, SQLLite, MySQL etc.)
 
 <img width="259" alt="Screenshot 2024-01-18 at 20 52 46" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/b9a9e19b-c16d-41bb-8524-3d6f13a1ddac">
-
-
-## Interactive API documentation
-
-<img width="1428" alt="Screenshot 2024-01-18 at 20 59 18" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/f4a55fe7-7259-434c-8804-858c94ad4bfb">
 
 
 ## Installation
