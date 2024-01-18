@@ -86,6 +86,7 @@ As this is a Base Project, currently there is only one table in the relational d
     ```
  
  
+
 3. Configure environment variables for email, OAuth2, JWT, and database settings
 
 <img width="863" alt="Screenshot 2024-01-18 at 21 25 54" src="https://github.com/tihomir-a51/Base-Project-Python-React/assets/138571393/7bf83b8f-9044-4482-9f83-2815e2ef4ebf">
