@@ -60,19 +60,19 @@ As this is a Base Project, currently there is only one table in the relational d
 2. Create virtual environment and install the dependencies for the project (requirements.txt)
 
     * Create virtual environment:
-    python -m venv venv
+      -> python -m venv venv
 
     * Activate virtual environment for Windows:
-    .\venv\Scripts\activate 
+      -> .\venv\Scripts\activate 
 
     * Activate virtual environment for MacOS / Linux:
-    source venv/bin/activate
+      -> source venv/bin/activate
 
     * Installing dependencies:
-    pip install -r requirements.txt
+      -> pip install -r requirements.txt
 
     * Display all dependencies:
-    pip list
+      -> pip list
 
 3. Configure environment variables for email, OAuth2, JWT, and database settings
 
