@@ -35,8 +35,16 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 
 2. Create virtual environment and install the dependencies for the project (requirements.txt)
 
+    python -m venv venv
+
     pip install -r requirements.txt
-    
+
+    Windows
+    .\venv\Scripts\activate 
+
+    MacOS / Linux
+    source venv/bin/activate
+
 3. Configure environment variables for email, OAuth2, JWT, and database settings
 
 4. Set up preferred database connection
