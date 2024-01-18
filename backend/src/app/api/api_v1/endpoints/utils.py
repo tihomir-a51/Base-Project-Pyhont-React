@@ -14,8 +14,7 @@ from app.core.config import settings
 
 router = APIRouter()
 
-templates = Jinja2Templates(directory=settings.TEMPLATE_ROOT)  # this path depends on your root folder =>
-# for example "backend/src/app/templates" if BaseProject_PythonReact is root directory
+templates = Jinja2Templates(directory=settings.TEMPLATE_ROOT)  # this path depends on your root folder see .env_example
 
 
 @router.get('/verification', response_class=HTMLResponse, include_in_schema=False)
