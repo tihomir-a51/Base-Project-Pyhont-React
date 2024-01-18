@@ -47,11 +47,14 @@ Here are some of the features of Base-Project-Python-React but not limited to:
     Installing dependencies:
     pip install -r requirements.txt
 
-    Display all dependencies
+    Display all dependencies:
     pip list
 
 3. Configure environment variables for email, OAuth2, JWT, and database settings
 
+    <img width="872" alt="Screenshot 2024-01-18 at 20 36 05" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/1f7bbf6a-8be9-41a0-9585-827f74e735d7">
+
+    
 4. Set up preferred database connection
 
 5. Start the application server
