@@ -68,9 +68,13 @@ Here are some of the features of Base-Project-Python-React but not limited to:
     npm start BaseProject_PythonReact
 
 
+## Backend testing - testing framework is pytest. Soon as the whole backend logic is implemented, the test will be provided with usage instructions 
+
+
 ## COntributing
 
 Contributions are welcome! 
+
 
 ## License
 
