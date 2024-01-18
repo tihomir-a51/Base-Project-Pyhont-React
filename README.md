@@ -29,9 +29,13 @@ Here are some of the features of Base-Project-Python-React but not limited to:
 
 ## Database
 
-As this is a Base Project, currently there is only one table in the relational database:
+As this is a Base Project, currently there is only one table in the relational database. Keep in mind that picture / logo of the user should be kept in database as BLOB (if you are using MariaDB) but this may vary depending on the database (PostgreSQL, SQLLite, MySQL etc.)
 
 <img width="259" alt="Screenshot 2024-01-18 at 20 52 46" src="https://github.com/tihomir-a51/Base-Project-Pyhont-React/assets/138571393/b9a9e19b-c16d-41bb-8524-3d6f13a1ddac">
+
+
+
+## Interactive API documentation
 
 
 ## Installation
