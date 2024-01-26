@@ -7,7 +7,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.db.models import DbUsers
-from app.schemas.user import UserCreate
+from backend.src.app.schemas.user_schema import UserCreate
 from app.email import *
 from app.core.hashing import Hash
 

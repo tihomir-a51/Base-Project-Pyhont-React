@@ -5,6 +5,8 @@ const CreateUser = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [first_name, setFirstName] = useState('');
+    const [last_name, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [isPending, setIsPending] = useState(false);
@@ -58,6 +60,22 @@ const CreateUser = () => {
         <div className="create-user">
             <h2>Create User</h2>
             <form onSubmit={handleSubmit}>
+                <label>First Name</label>
+                <input
+                    type='text'
+                    placeholder="Write your first name here..."
+                    required
+                    value={first_name}
+                    onChange={(event) => setFirstName(event.target.value)}
+                />
+                <label>Last Name</label>
+                <input
+                    type='text'
+                    placeholder="Write your last name here..."
+                    required
+                    value={last_name}
+                    onChange={(event) => setLastName(event.target.value)}
+                />
                 <label>Username</label>
                 <input
                     type='text'
