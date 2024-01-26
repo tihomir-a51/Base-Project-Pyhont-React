@@ -3,7 +3,7 @@ from pydantic import BaseModel, EmailStr, PositiveInt, constr
 
 
 class UserType(str, Enum):
-    '''
+    """
     This class can be user when more users are created for the app. Can be added to UserCreate:
         type: UserType
 
@@ -11,21 +11,22 @@ class UserType(str, Enum):
 
        def get_type(self):
         return self.type
-    
+
     Pydantic will take care to validate all UserType objects that are valid
-    '''
+    """
+
     admin = "admin"
     user = "user"
-    supervisor = 'supervisor'
-    moderator = 'moderator'
+    supervisor = "supervisor"
+    moderator = "moderator"
 
-    
+
 class UserCreate(BaseModel):
     username: constr(min_length=2, max_length=15)
     password: constr(min_length=2, max_length=15)
+    email: EmailStr
     first_name: constr(min_length=2)
     last_name: constr(min_length=2)
-    email: EmailStr
 
 
 class UserDisplay(BaseModel):

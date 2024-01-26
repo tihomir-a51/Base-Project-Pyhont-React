@@ -3,7 +3,7 @@ from typing import Annotated, List
 from fastapi import Depends, APIRouter, File, HTTPException, Path, UploadFile
 from sqlalchemy.orm import Session
 
-from backend.src.app.schemas.user_schema import UserDisplay, UserCreate
+from app.schemas.user_schema import UserDisplay, UserCreate
 from app.db.database import get_db
 from app.db.models import DbUsers
 import app.crud.crud_users as crud_user

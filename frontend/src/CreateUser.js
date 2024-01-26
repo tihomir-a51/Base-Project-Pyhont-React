@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
 const CreateUser = () => {
+    const [first_name, setFirstName] = useState('');
+    const [last_name, setLastName] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [first_name, setFirstName] = useState('');
-    const [last_name, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [isPending, setIsPending] = useState(false);
@@ -18,7 +18,7 @@ const CreateUser = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const user = { username, password, email };
+        const user = { username, password, email, first_name, last_name };
 
         setIsPending(true);
 
@@ -33,8 +33,13 @@ const CreateUser = () => {
                 } else if (response.status === 422) {
                     response.json().then(data => {
                         const location = data.detail[0].loc[1]
-
-                        if (location === "username") {
+                        console.log(location)
+                        console.log(data)
+                        if (location === "first_name") {
+                            setErrorMessage('first name should be at least 2 characters long')
+                        } else if (location === 'last_name') {
+                            setErrorMessage('last name should be at least 2 characters long')
+                        } else if (location === "username") {
                             setErrorMessage('username should be between 2 and 15 characters long')
                         } else if (location === "password") {
                             setErrorMessage('password should be between 2 and 15 characters long')
