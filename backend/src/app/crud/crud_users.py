@@ -17,8 +17,9 @@ UserModelType = TypeVar("UserModelType", bound=DbUsers)
 
 class UserFactory(Generic[UserModelType]):
     @staticmethod
-    async def create_db_user(db: Session, schema: UserCreate,
-                             user_type: str) -> UserModelType:
+    async def create_db_user(
+        db: Session, schema: UserCreate, user_type: str
+    ) -> UserModelType:
         """
         Create a new user in the database based on the provided schema.
 
@@ -39,7 +40,7 @@ class UserFactory(Generic[UserModelType]):
             first_name=schema.first_name,
             last_name=schema.last_name,
             email=schema.email,
-            type='user'
+            type="user",
         )
         try:
             db.add(new_user)
@@ -66,9 +67,9 @@ def create_user_factory(user_type: str) -> Type[UserFactory]:
     ValueError: If an unsupported user type is provided.
     """
 
-    factories = {     # here you can add different users for the logic. Currently the users are admin and user
+    factories = {  # here you can add different users for the logic. Currently the users are admin and user
         "admin": UserFactory,
-        "user": UserFactory
+        "user": UserFactory,
     }
     return factories.get(user_type, UserFactory)
 
@@ -89,13 +90,15 @@ async def create_user(db: Session, schema: UserCreate) -> UserModelType:
     """
 
     # user_type = schema.get_type() - this can be used when several users are created. Check UserType for reference
-    user_type = 'user'
+    user_type = "user"
     factory = create_user_factory(user_type)
     new_user = await factory.create_db_user(db, schema, user_type)
-    return {'message': f'Verification e-mail sent to {schema.email}, please verify your account'}
+    return {
+        "message": f"Verification e-mail sent to {schema.email}, please verify your account"
+    }
 
 
-def get_data_db(db: Session, db_tables, filters = 1) -> List[DbUsers]:
+def get_data_db(db: Session, db_tables, filters=1) -> List[DbUsers]:
     """
     Retrieve data from the specified database tables with optional filters.
 
@@ -111,7 +114,7 @@ def get_data_db(db: Session, db_tables, filters = 1) -> List[DbUsers]:
     Raises:
     ValueError: If filters are provided but not of the correct type.
     """
-    
+
     if filters != 1:
         return db.query(*db_tables).filter(*filters)
     else:
@@ -134,10 +137,13 @@ def delete_data_db(db: Session, user: DbUsers) -> None:
     """
 
     user.is_deleted = True
+    user.is_verified = False
     db.commit()
-    
 
-async def upload_picture(db: Session, user: DbUsers, image: bytearray) -> Dict[str, str]:
+
+async def upload_picture(
+    db: Session, user: DbUsers, image: bytearray
+) -> Dict[str, str]:
     """
     Upload a user's profile picture.
 
@@ -152,7 +158,7 @@ async def upload_picture(db: Session, user: DbUsers, image: bytearray) -> Dict[s
     Raises:
     SQLAlchemyError: If there's an issue committing the changes to the database.
     """
-     
+
     user.picture = image
     db.commit()
 
@@ -173,5 +179,5 @@ async def get_image(db: Session, user: DbUsers) -> StreamingResponse:
     Raises:
     HTTPException: If the user does not have a profile image or if there's an issue retrieving it.
     """
-    
+
     return StreamingResponse(io.BytesIO(user.picture), media_type="image/jpeg")
