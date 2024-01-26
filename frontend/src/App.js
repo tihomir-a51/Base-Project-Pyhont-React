@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import Home from './Home'
 import CreateUser from './CreateUser'
 import GetUsers from './GetUsers'
-import LogOut from './LogOut'
+import LogIn from "./LogIn"
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
             <Route path="/create">
               <CreateUser />
             </Route>
-            <Route path="/logout">
-              <LogOut />
+            <Route path="/log-in">
+              <LogIn />
             </Route>
           </Switch>
         </div>
