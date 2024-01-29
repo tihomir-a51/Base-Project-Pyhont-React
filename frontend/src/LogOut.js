@@ -1,30 +1,22 @@
-import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const LogOut = () => {
-    const [showConfirmation, setShowConfirmation] = useState()
     const history = useHistory();
 
-    const handleLogout = () => {
+    const handleConfirmLogout = () => {
         localStorage.removeItem('token');
-        history.push('/login');
+        history.push('/log-in');
     };
 
-    const handleConfirmLogout = () => {
-        handleLogout();
-        setShowConfirmation(false);
-    };
+    const handleDeclineLogout = () => {
+        history.push('/');
+    }
 
     return (
-        <div>
-            <button onClick={() => setShowConfirmation(true)}>Logout</button>
-            {showConfirmation && (
-                <div className='confirmation-dialog'>
-                    <p>Are you sure you want to logout?</p>
-                    <button onClick={handleConfirmLogout}>Yes</button>
-                    <button onClick={() => setShowConfirmation(false)}>No</button>
-                </div>
-            )}
+        <div className='confirmation-dialog'>
+            <p>Are you sure you want to logout?</p>
+            <button className='confirmation-yes-button' onClick={handleConfirmLogout}>Yes</button>
+            <button className="confirmation-no-button" onClick={handleDeclineLogout}>No</button>
         </div>
     );
 };

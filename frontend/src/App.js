@@ -5,6 +5,7 @@ import Home from './Home'
 import CreateUser from './CreateUser'
 import GetUsers from './GetUsers'
 import LogIn from "./LogIn"
+import LogOut from "./LogOut"
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/log-in">
               <LogIn />
+            </Route>
+            <Route path="/logout">
+              <LogOut />
             </Route>
           </Switch>
         </div>
