@@ -4,10 +4,16 @@ const useFetch = (url) => {
     const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(true)
     const [error, setError] = useState(null)
+    const token = localStorage.getItem("token")
 
     useEffect(() => {
+        if (!token) {
+            setIsPending(false);
+            setError("Please log in to perform this operation");
+            return;
+        }
+
         const abortCont = new AbortController();
-        const token = localStorage.getItem("token")
 
         fetch(url, {
             signal: abortCont.signal,
@@ -38,11 +44,9 @@ const useFetch = (url) => {
             })
         return () => abortCont.abort()
 
-    }, [url])
+    }, [url, token])
 
     return { data, isPending, error }
 }
-
-
 
 export default useFetch
