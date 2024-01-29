@@ -6,6 +6,7 @@ import CreateUser from './CreateUser'
 import GetUsers from './GetUsers'
 import LogIn from "./LogIn"
 import LogOut from "./LogOut"
+import ImageUploader from "./ImageUploader"
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/upload-image">
+              <ImageUploader />
             </Route>
             <Route path="/get-users">
               <GetUsers />
