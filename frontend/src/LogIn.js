@@ -24,7 +24,6 @@ const LogIn = () => {
         }).then(response => {
             if (!response.ok) {
                 if (response.status === 422) {
-                    console.log('here')
                 }
             }
             setIsPending(false)
@@ -40,28 +39,34 @@ const LogIn = () => {
         <div className="login">
             <h2>Log in</h2>
             <form onSubmit={handleLogin}>
-                <label>Username</label>
+                <label htmlFor="username">Username</label>
                 <input
                     type='text'
+                    id='username'
                     placeholder="Write your username name here..."
                     required
                     value={username}
                     onChange={(event) => setUsername(event.target.value)}
+                    autoComplete="username"
+
                 />
-                <label>Password</label>
+                <label htmlFor="password">Password</label>
                 <div className="password-input-container">
                     <input
                         type={showPassword ? 'text' : 'password'}
+                        id='password'
                         placeholder="Write your password here..."
                         required
                         value={password}
                         onChange={(event) => setPassword(event.target.value)}
+                        autoComplete="current-password"
+
                     />
                     <button type="button" className="password-toggle-button" onClick={handleTogglePasswordVisibility}>
                         {showPassword ? 'Hide' : 'Show'}
                     </button>
                     {errorMessage && <p className="error">{errorMessage}</p>}
-                    {!isPending && <button>Add User</button>}
+                    {!isPending && <button>Login</button>}
                     {isPending && <button disabled>Please wait...</button>}
                 </div>
 
