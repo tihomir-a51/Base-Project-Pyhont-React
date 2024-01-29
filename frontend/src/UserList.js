@@ -1,13 +1,22 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import Pagination from "./Pagination";
 
 const UserList = ({ users }) => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [itemsPerPage] = useState(3);
     const [errorMessages, setErrorMessages] = useState({});
-    const history = useHistory()
-    const token = localStorage.getItem("token")
+    const history = useHistory();
+    const token = localStorage.getItem("token");
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentUsers = users.slice(indexOfFirstItem, indexOfLastItem);
+
+    const paginate = pageNumber => setCurrentPage(pageNumber);
 
     const handleDelete = (id) => {
-        setErrorMessages({})
+        setErrorMessages({});
 
         fetch(`http://localhost:8000/users/${id}`, {
             method: "DELETE",
@@ -31,7 +40,7 @@ const UserList = ({ users }) => {
                     [id]: null
                 }));
             }
-            history.push('/')
+            history.push('/');
         }).catch(error => {
             setErrorMessages(prevErrors => ({
                 ...prevErrors,
@@ -42,15 +51,21 @@ const UserList = ({ users }) => {
 
     return (
         <div className="user-list">
-            {users.map((user) => (
+            {currentUsers.map((user) => (
                 <div className="user-preview" key={user.id}>
                     <h2>{user.username}</h2>
                     <button onClick={() => handleDelete(user.id)}>delete</button>
                     {errorMessages[user.id] && <p className="error">{errorMessages[user.id]}</p>}
                 </div>
             ))}
+            <Pagination
+                itemsPerPage={itemsPerPage}
+                totalItems={users.length}
+                paginate={paginate}
+                currentPage={currentPage}
+            />
         </div>
     );
-}
+};
 
 export default UserList;

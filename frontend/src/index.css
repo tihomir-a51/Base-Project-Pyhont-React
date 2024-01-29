@@ -201,3 +201,27 @@ code {
 .user-preview p {
   color: #f20606
 }
+
+/* user list pagination */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.pagination li {
+  margin: 0 5px; 
+}
+.pagination button {
+  padding: 5px 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.pagination button:hover {
+  background-color: #ddd;
+}
+.active button {
+  background-color: #007bff;
+  color: #fff;
+}
