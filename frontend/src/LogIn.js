@@ -14,6 +14,25 @@ const LogIn = () => {
     };
 
     const handleLogin = () => {
+        const user = { username, password }
+        setIsPending(true)
+
+        fetch('http://localhost:8000/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(user)
+        }).then(response => {
+            if (!response.ok) {
+                if (response.status === 422) {
+                    console.log('here')
+                }
+            }
+            setIsPending(false)
+            history.push('/')
+        }).catch(error => {
+            setErrorMessage(error.message || 'An error occurred.');
+            setIsPending(false);
+        })
 
     }
 

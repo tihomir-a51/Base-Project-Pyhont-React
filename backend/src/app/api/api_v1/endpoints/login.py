@@ -12,9 +12,11 @@ from app.core.hashing import Hash
 router = APIRouter()
 
 
-@router.post('/login', include_in_schema=False)
-async def login(schema: Annotated[OAuth2PasswordRequestForm, Depends()],
-                db: Annotated[Session, Depends(get_db)]):
+@router.post("/login", include_in_schema=False)
+async def login(
+    schema: Annotated[OAuth2PasswordRequestForm, Depends()],
+    db: Annotated[Session, Depends(get_db)],
+):
     """
     Endpoint: POST /login
 
@@ -30,22 +32,19 @@ async def login(schema: Annotated[OAuth2PasswordRequestForm, Depends()],
     200 OK: Successful login. Returns an object containing the access_token, token_type, user_id, and username
     401 Unauthorized: Returned if the username is invalid or the password is incorrect.
     """
-    user = db.query(DbUsers).filter(DbUsers.username == schema.username,
-                                    DbUsers.is_deleted == False).first()
+    user = (
+        db.query(DbUsers)
+        .filter(DbUsers.username == schema.username, DbUsers.is_deleted == False)
+        .first()
+    )
     if not user:
-        raise HTTPException(
-            status_code=401,
-            detail='Invalid username'
-        )
+        raise HTTPException(status_code=401, detail="Invalid username")
     if not Hash.verify(user.password, schema.password):
-        raise HTTPException(
-            status_code=401,
-            detail='Incorrect password'
-        )
-    access_token = create_access_token(data={'username': user.username})
+        raise HTTPException(status_code=401, detail="Incorrect password")
+    access_token = create_access_token(data={"username": user.username})
     return {
-        'access_token': access_token,
-        'token_type': 'bearer',
-        'user_id': user.id,
-        'username': user.username
+        "access_token": access_token,
+        "token_type": "bearer",
+        "user_id": user.id,
+        "username": user.username,
     }
