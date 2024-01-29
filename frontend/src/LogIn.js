@@ -38,7 +38,6 @@ const LogIn = () => {
             }
             return response.json();
         }).then(data => {
-            console.log(data.access_token)
             localStorage.setItem('token', data.access_token);
             setIsPending(false)
             history.push('/')

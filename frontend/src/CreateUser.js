@@ -33,8 +33,7 @@ const CreateUser = () => {
                 } else if (response.status === 422) {
                     response.json().then(data => {
                         const location = data.detail[0].loc[1]
-                        console.log(location)
-                        console.log(data)
+
                         if (location === "first_name") {
                             setErrorMessage('first name should be at least 2 characters long')
                         } else if (location === 'last_name') {

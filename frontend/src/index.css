@@ -198,3 +198,6 @@ code {
 .confirmation-no-button {
   margin-left: 10px;
 }
+.user-preview p {
+  color: #f20606
+}

@@ -1,13 +1,42 @@
+import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const UserList = ({ users }) => {
+    const [errorMessages, setErrorMessages] = useState({});
     const history = useHistory()
+    const token = localStorage.getItem("token")
 
     const handleDelete = (id) => {
+        setErrorMessages({})
+
         fetch(`http://localhost:8000/users/${id}`, {
-            method: "DELETE"
-        }).then(() => {
+            method: "DELETE",
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            if (!response.ok) {
+                if (response.status === 401) {
+                    response.json().then(data => {
+                        setErrorMessages(prevErrors => ({
+                            ...prevErrors,
+                            [id]: data.detail
+                        }));
+                    })
+                }
+            } else {
+                setErrorMessages(prevErrors => ({
+                    ...prevErrors,
+                    [id]: null
+                }));
+            }
             history.push('/')
+        }).catch(error => {
+            setErrorMessages(prevErrors => ({
+                ...prevErrors,
+                [id]: error.message || 'An error occurred.'
+            }));
         })
     }
 
@@ -16,8 +45,8 @@ const UserList = ({ users }) => {
             {users.map((user) => (
                 <div className="user-preview" key={user.id}>
                     <h2>{user.username}</h2>
-                    <p>{user.email}</p>
                     <button onClick={() => handleDelete(user.id)}>delete</button>
+                    {errorMessages[user.id] && <p className="error">{errorMessages[user.id]}</p>}
                 </div>
             ))}
         </div>
