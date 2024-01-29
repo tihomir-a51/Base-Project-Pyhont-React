@@ -1,7 +1,8 @@
 const Home = () => {
+    const token = localStorage.getItem("token")
     return (
         <div className="home">
-            <h2>Home</h2>
+            <h2>{token}</h2>
         </div>
     );
 }

@@ -37,10 +37,12 @@ async def login(
         .filter(DbUsers.username == schema.username, DbUsers.is_deleted == False)
         .first()
     )
+    if user and not user.is_verified:
+        raise HTTPException(status_code=401, detail="Please verify your account")
     if not user:
-        raise HTTPException(status_code=401, detail="Invalid username")
+        raise HTTPException(status_code=401, detail="Invalid username or password")
     if not Hash.verify(user.password, schema.password):
-        raise HTTPException(status_code=401, detail="Incorrect password")
+        raise HTTPException(status_code=401, detail="Invalid username or password")
     access_token = create_access_token(data={"username": user.username})
     return {
         "access_token": access_token,

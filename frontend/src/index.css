@@ -133,6 +133,7 @@ code {
   margin-bottom: 10px;
 }
 .login input {
+  position: relative;
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -151,11 +152,15 @@ code {
 .login-toggle-button {
   position: absolute;
   right: 5px;
-  top: 21%;
-  transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-131%);
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 8px;
   border-radius: 10px;
+}
+.login-password-input-container {
+  position: relative;
+  width: 100%;
 }
