@@ -62,7 +62,7 @@ const LogIn = () => {
                         autoComplete="current-password"
 
                     />
-                    <button type="button" className="password-toggle-button" onClick={handleTogglePasswordVisibility}>
+                    <button type="button" className="login-toggle-button" onClick={handleTogglePasswordVisibility}>
                         {showPassword ? 'Hide' : 'Show'}
                     </button>
                     {errorMessage && <p className="error">{errorMessage}</p>}

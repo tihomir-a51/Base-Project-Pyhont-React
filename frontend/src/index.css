@@ -148,7 +148,7 @@ code {
   border-radius: 8px;
   cursor: pointer;
 }
-.password-toggle-button {
+.login-toggle-button {
   position: absolute;
   right: 5px;
   top: 21%;
