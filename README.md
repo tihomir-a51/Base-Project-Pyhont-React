@@ -108,6 +108,8 @@ As this is a Base Project, currently there is only one table in the relational d
 
 The frontend of this project is developed in React, a popular JavaScript library for building user interfaces. This guide will help you set up the frontend environment and provide an overview of its functionalities.
 
+### Usage
+
 Front end has two different panels - for Admin and for regular user:
 
 Admin Panel:
@@ -116,6 +118,17 @@ If you log in with admin credentials, you'll have access to the admin panel. The
 Regular User Panel:
 For regular users, the interface provides basic functionalities tailored to their needs.
 Regular users can access their profile, view content, and perform standard actions.
+
+### Customization
+
+The frontend is designed to be modular and easily extensible.
+You can customize the appearance and behavior by modifying React components and stylesheets.
+Additional functionalities can be added by integrating new components and updating the routing logic.
+
+### Backend Integration
+
+All backend functionalities, including user management, authentication, and pagination, are seamlessly integrated into the frontend.
+Ensure that the backend server is running and accessible to enable full functionality of the frontend.
 
 ## Usage Examples
 
