@@ -13,55 +13,67 @@ import AdminNavbar from "./AdminNavbar";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [createUser, setCreateUser] = useState(false);
-  const userRole = localStorage.getItem("userRole")
+  const userRole = localStorage.getItem("userRole");
 
   return (
     <Router>
       <div className="App">
         {!isLoggedIn && (
-          <>
-            <Route path="/log-in">
-              <LogIn setIsLoggedIn={setIsLoggedIn} setCreateUser={setCreateUser} />
-            </Route>
-          </>
+          <Route path="/log-in">
+            <LogIn setIsLoggedIn={setIsLoggedIn} setCreateUser={setCreateUser} />
+          </Route>
         )}
-        {createUser && (
-          <>
-            <Route path="/create">
-              <CreateUser createUser={setCreateUser} />
-            </Route>
-          </>
+        {!createUser && (
+          <Route path="/create">
+            <CreateUser setCreateUser={true} />
+          </Route>
         )}
         {isLoggedIn && (
           <>
             {userRole === "admin" ? (
-              <AdminNavbar />
-            ) : (
-              <Navbar />
-            )}
-            <div className="Content">
-              <Switch>
-                <Route exact path="/logout">
-                  <LogOut setIsLoggedIn={setIsLoggedIn} />
-                </Route>
-                <Route exact path="/upload-image">
-                  <ImageUploader />
-                </Route>
-                <Route exact path="/">
-                  <Home />
-                </Route>
-                <Route exact path="/get-users">
-                  <GetUsers />
-                </Route>
-                {userRole === 'admin' && (
-                  <>
+              <>
+                <AdminNavbar />
+                <div className="Content">
+                  <Switch>
+                    <Route path="/create">
+                      <CreateUser />
+                    </Route>
+                    <Route exact path="/logout">
+                      <LogOut setIsLoggedIn={setIsLoggedIn} />
+                    </Route>
+                    <Route exact path="/upload-image">
+                      <ImageUploader />
+                    </Route>
+                    <Route exact path="/">
+                      <Home />
+                    </Route>
                     <Route exact path="/get-users">
                       <GetUsers />
                     </Route>
-                  </>
-                )}
-              </Switch>
-            </div>
+                  </Switch>
+                </div>
+              </>
+            ) : (
+              <>
+                <Navbar />
+                <div className="Content">
+                  <Switch>
+                    <Route exact path="/logout">
+                      <LogOut setIsLoggedIn={setIsLoggedIn} />
+                    </Route>
+                    <Route exact path="/upload-image">
+                      <ImageUploader />
+                    </Route>
+                    <Route exact path="/">
+                      <Home />
+                    </Route>
+                    <Route exact path="/get-users">
+                      <GetUsers />
+                    </Route>
+                  </Switch>
+                </div>
+              </>
+            )}
           </>
         )}
         {!isLoggedIn && <Redirect to="/log-in" />}
@@ -71,4 +83,3 @@ function App() {
 }
 
 export default App;
-

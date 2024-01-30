@@ -15,7 +15,6 @@ const LogIn = ({ setIsLoggedIn, setCreateUser }) => {
     };
 
     const handleCreateUser = () => {
-        setCreateUser(true)
         history.push('/create')
     }
 
@@ -47,6 +46,7 @@ const LogIn = ({ setIsLoggedIn, setCreateUser }) => {
             localStorage.setItem('userId', data.id)
             localStorage.setItem('username', data.username)
             localStorage.setItem('userRole', data.type);
+            setCreateUser(true)
             setIsPending(false)
             setIsLoggedIn(true)
             history.push('/')

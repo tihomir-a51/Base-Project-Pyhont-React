@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const AdminNavbar = () => {
     return (
         <nav className="admin-navbar">
-            <h1>Test Project Python + React / admin</h1>
+            <h1>Test Project Python + React / Admin</h1>
             <div className="links">
                 <Link to="/">Home</Link>
                 <Link to="/upload-image">Upload Photo</Link>
