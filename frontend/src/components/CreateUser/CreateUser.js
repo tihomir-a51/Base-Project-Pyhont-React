@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
+
 const CreateUser = () => {
     const [first_name, setFirstName] = useState('');
     const [last_name, setLastName] = useState('');

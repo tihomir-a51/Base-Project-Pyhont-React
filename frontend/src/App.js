@@ -19,7 +19,6 @@ import './components/UserList/Pagination.css'
 import './components/UserList/UserList.css'
 
 
-
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [createUser, setCreateUser] = useState(false);

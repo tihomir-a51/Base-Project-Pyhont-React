@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 
+
 const LogOut = ({ setIsLoggedIn, setCreateUser }) => {
     const history = useHistory();
 

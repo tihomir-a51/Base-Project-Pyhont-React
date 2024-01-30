@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const ImageUploader = ({ onUpload, maxSizeMB }) => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [error, setError] = useState(null);

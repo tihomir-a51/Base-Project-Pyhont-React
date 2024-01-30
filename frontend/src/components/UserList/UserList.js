@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import Pagination from "./Pagination.js";
 
+
 const UserList = ({ users }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(3);
