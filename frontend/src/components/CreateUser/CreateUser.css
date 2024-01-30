@@ -1,0 +1,59 @@
+/* create new user form */
+.create-user {
+    max-width: 300px;
+    margin: 0px auto 0 auto;
+    text-align: center;
+  }
+  .create-user label {
+    text-align: left;
+    display: block;
+  }
+  .create-user h2 {
+    font-size: 20px;
+    display: block;
+  }
+  .create-user p {
+    font-size: 15px;
+    color: #f20606;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .create-user input {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+  }
+  .create-user button {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .password-input-container {
+    position: relative;
+    width: 100%;
+  }
+  .password-toggle-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 8px;
+    border-radius: 10px;
+  }
+  .error-create-user {
+    width: 30%;
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f20606;
+  }

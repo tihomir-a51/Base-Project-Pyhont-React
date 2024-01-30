@@ -1,0 +1,31 @@
+.home {
+    text-align: left;
+  }
+  .home h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .home ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .home li {
+    margin-bottom: 10px;
+  }
+  .home a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+  }
+  .home img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  .home a {
+    display: inline-block;
+    text-align: center;
+  }

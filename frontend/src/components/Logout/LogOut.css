@@ -1,0 +1,35 @@
+/* logout confirmation dialog */
+.confirmation-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  .confirmation-dialog p {
+    margin-bottom: 10px;
+  }
+  .confirmation-dialog button {
+    margin-right: 10px;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .confirmation-dialog button:hover {
+    background-color: #f1c3c3;
+  }
+  .confirmation-yes-button {
+    margin-left: 80px;
+  }
+  .confirmation-no-button {
+    margin-left: 10px;
+  }
+  .user-preview p {
+    color: #f20606
+  }

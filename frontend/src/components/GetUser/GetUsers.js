@@ -1,5 +1,5 @@
-import UserList from "./UserList";
-import useFetch from "../useFetch";
+import UserList from "../UserList/UserList";
+import useFetch from "../../useFetch";
 
 const GetUsers = () => {
     const { data: users, isPending, error } = useFetch("http://localhost:8000/users")

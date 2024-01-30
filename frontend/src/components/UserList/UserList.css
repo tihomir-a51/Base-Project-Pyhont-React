@@ -1,0 +1,16 @@
+.user-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #fafafa;
+  }
+  .user-preview:hover {
+    box-shadow: 1px 3px 15px rgba(187, 7, 7, 0.211);
+  }
+  .user-preview h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 8px;
+  }
+  .user-preview a{
+    text-decoration: none;
+  }
