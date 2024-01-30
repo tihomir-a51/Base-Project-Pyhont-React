@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import { useState } from "react";
 
-import Navbar from './Navbar';
-import Home from './Home';
-import GetUsers from './GetUsers';
-import LogIn from "./LogIn";
-import LogOut from "./LogOut";
-import ImageUploader from "./ImageUploader";
-import CreateUser from './CreateUser';
-import AdminNavbar from "./AdminNavbar";
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import GetUsers from './components/GetUsers';
+import LogIn from "./components/LogIn";
+import LogOut from "./components/LogOut";
+import ImageUploader from "./components/ImageUploader";
+import CreateUser from './components/CreateUser';
+import AdminNavbar from "./components/AdminNavbar";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
