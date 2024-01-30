@@ -39,7 +39,7 @@ function App() {
                       <CreateUser />
                     </Route>
                     <Route exact path="/logout">
-                      <LogOut setIsLoggedIn={setIsLoggedIn} />
+                      <LogOut setIsLoggedIn={setIsLoggedIn} setCreateUser={setCreateUser} />
                     </Route>
                     <Route exact path="/upload-image">
                       <ImageUploader />
@@ -59,7 +59,7 @@ function App() {
                 <div className="Content">
                   <Switch>
                     <Route exact path="/logout">
-                      <LogOut setIsLoggedIn={setIsLoggedIn} />
+                      <LogOut setIsLoggedIn={setIsLoggedIn} setCreateUser={setCreateUser} />
                     </Route>
                     <Route exact path="/upload-image">
                       <ImageUploader />

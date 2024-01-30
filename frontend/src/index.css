@@ -89,7 +89,7 @@ code {
 /* create new user form */
 .create-user {
   max-width: 300px;
-  margin: 100px auto 0 auto;
+  margin: 0px auto 0 auto;
   text-align: center;
 }
 .create-user label {
@@ -140,7 +140,7 @@ code {
 .error-create-user {
   width: 30%;
   position: absolute;
-  bottom: 160px;
+  bottom: 170px;
   left: 50%;
   transform: translateX(-50%);
   color: #f20606;
