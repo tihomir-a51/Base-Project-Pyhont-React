@@ -106,7 +106,7 @@ As this is a Base Project, currently there is only one table in the relational d
 
 ## Frontend
 
-    The frontend of this project is developed in React, a popular JavaScript library for building user interfaces. This guide will help you set up the frontend environment and provide an overview of its functionalities.
+The frontend of this project is developed in React, a popular JavaScript library for building user interfaces. This guide will help you set up the frontend environment and provide an overview of its functionalities.
 
     Front end has two different panels - for Admin and for regular user:
 
