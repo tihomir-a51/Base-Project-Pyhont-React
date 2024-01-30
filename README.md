@@ -100,9 +100,7 @@ As this is a Base Project, currently there is only one table in the relational d
 
 6. Start the React Front End
 
-   ```bash
    npm start frontend
-   ```
 
 ## Frontend
 
