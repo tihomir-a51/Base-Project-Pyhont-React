@@ -49,10 +49,10 @@ const ImageUploader = ({ onUpload, maxSizeMB }) => {
     return (
         <div>
             <input type="file" accept="image/*" onChange={handleImageChange} />
-            {error && <p style={{ color: "red" }}>{error}</p>}
             <button onClick={handleUpload} disabled={error || !selectedImage}>
                 Upload Image
             </button>
+            {error && <p>{error}</p>}
         </div>
     );
 };

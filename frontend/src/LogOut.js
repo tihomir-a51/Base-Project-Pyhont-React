@@ -1,10 +1,11 @@
 import { useHistory } from 'react-router-dom';
 
-const LogOut = () => {
+const LogOut = ({ setIsLoggedIn }) => {
     const history = useHistory();
 
     const handleConfirmLogout = () => {
         localStorage.removeItem('token');
+        setIsLoggedIn(false)
         history.push('/log-in');
     };
 

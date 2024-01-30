@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
-const LogIn = () => {
+const LogIn = ({ setIsLoggedIn }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -40,6 +40,7 @@ const LogIn = () => {
         }).then(data => {
             localStorage.setItem('token', data.access_token);
             setIsPending(false)
+            setIsLoggedIn(true)
             history.push('/')
         }).catch(error => {
             setErrorMessage(error.message || 'An error occurred.');
