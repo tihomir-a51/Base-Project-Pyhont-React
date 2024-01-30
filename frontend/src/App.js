@@ -14,7 +14,6 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [createUser, setCreateUser] = useState(false);
   const userRole = localStorage.getItem("userRole")
-  console.log(userRole)
 
   return (
     <Router>
