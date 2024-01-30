@@ -50,6 +50,9 @@ function App() {
                 <Route exact path="/">
                   <Home />
                 </Route>
+                <Route exact path="/get-users">
+                  <GetUsers />
+                </Route>
                 {userRole === 'admin' && (
                   <>
                     <Route exact path="/get-users">

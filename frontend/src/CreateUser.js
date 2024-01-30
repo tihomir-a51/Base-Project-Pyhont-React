@@ -52,7 +52,7 @@ const CreateUser = () => {
                 }
             }
             setIsPending(false);
-            history.push('/');
+            history.push('/log-in');
         }).catch(error => {
             setErrorMessage(error.message || 'An error occurred.');
             setIsPending(false);
@@ -109,8 +109,8 @@ const CreateUser = () => {
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                 />
-                {errorMessage && <p className="error">{errorMessage}</p>}
-                {!isPending && <button>Add User</button>}
+                {errorMessage && <p className="error-create-user">{errorMessage}</p>}
+                {!isPending && <button>Create User</button>}
                 {isPending && <button disabled>Please wait...</button>}
             </form>
         </div>

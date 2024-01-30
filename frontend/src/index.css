@@ -137,6 +137,14 @@ code {
   font-size: 8px;
   border-radius: 10px;
 }
+.error-create-user {
+  width: 30%;
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f20606;
+}
 
 /* navbar */
 .navbar {

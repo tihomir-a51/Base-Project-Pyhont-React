@@ -13,6 +13,8 @@ const UserList = ({ users }) => {
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentUsers = users.slice(indexOfFirstItem, indexOfLastItem);
 
+    const userRole = localStorage.getItem('userRole')
+
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
     const handleDelete = (id) => {
@@ -54,7 +56,11 @@ const UserList = ({ users }) => {
             {currentUsers.map((user) => (
                 <div className="user-preview" key={user.id}>
                     <h2>{user.username}</h2>
-                    <button onClick={() => handleDelete(user.id)}>delete</button>
+                    <>
+                        {userRole === "admin" && (
+                            <button onClick={() => handleDelete(user.id)}>delete</button>
+                        )}
+                    </>
                     {errorMessages[user.id] && <p className="error">{errorMessages[user.id]}</p>}
                 </div>
             ))}
