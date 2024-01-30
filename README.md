@@ -136,12 +136,12 @@ Ensure that the backend server is running and accessible to enable full function
 
 ## Backend testing
 
-    Testing framework is pytest. Soon as the whole backend logic is implemented, the test will be provided with usage instructions
+Testing framework is pytest. Soon as the whole backend logic is implemented, the test will be provided with usage instructions
 
 ## Contributing
 
-    Contributions are welcome!
+Contributions are welcome!
 
 ## License
 
-    This project is licensed under the MIT License.
+This project is licensed under the MIT License.
