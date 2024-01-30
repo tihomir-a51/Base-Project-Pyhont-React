@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const AdminNavbar = () => {
     return (
-        <nav className="navbar">
-            <h1>Test Project Python + React</h1>
+        <nav className="admin-navbar">
+            <h1>Test Project Python + React / admin</h1>
             <div className="links">
                 <Link to="/">Home</Link>
                 <Link to="/upload-image">Upload Photo</Link>
+                <Link to="/get-users">Get All Users</Link>
                 <Link to='/logout'>Logout</Link>
             </div>
         </nav>
     );
 }
 
-export default Navbar;
+export default AdminNavbar;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
-const LogIn = ({ setIsLoggedIn }) => {
+const LogIn = ({ setIsLoggedIn, setCreateUser }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -13,6 +13,11 @@ const LogIn = ({ setIsLoggedIn }) => {
     const handleTogglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
+
+    const handleCreateUser = () => {
+        setCreateUser(true)
+        history.push('/create')
+    }
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -39,6 +44,9 @@ const LogIn = ({ setIsLoggedIn }) => {
             return response.json();
         }).then(data => {
             localStorage.setItem('token', data.access_token);
+            localStorage.setItem('userId', data.id)
+            localStorage.setItem('username', data.username)
+            localStorage.setItem('userRole', data.type);
             setIsPending(false)
             setIsLoggedIn(true)
             history.push('/')
@@ -81,6 +89,7 @@ const LogIn = ({ setIsLoggedIn }) => {
                     {errorMessage && <p className="error">{errorMessage}</p>}
                     {!isPending && <button>Login</button>}
                     {isPending && <button disabled>Please wait...</button>}
+                    <button type="button" className="create-user-button" onClick={handleCreateUser}>Create User</button>
                 </div>
 
             </form>

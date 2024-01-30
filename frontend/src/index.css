@@ -15,56 +15,81 @@ code {
   font-family: "Quicksand";
   color: #333;
 }
-.navbar {
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  max-width: 1300px;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-}
-.navbar h1 {
-  color: #f1356d;
-}
-.navbar .links {
-  margin-left: auto;
-}
-.navbar a {
-  margin-left: 10px;
-  text-decoration: none;
-  padding: 6px;
-}
-.navbar a:hover {
-  color: #f1356d;
-}
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 5px;
-}
 
-/* user previews / list */
-.user-preview {
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+/* login form */
+.login {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 120px;
+  position: center;
 }
-.user-preview:hover {
-  box-shadow: 1px 3px 15px rgba(187, 7, 7, 0.211);
+.login label {
+  text-align: left;
+  display: block;
 }
-.user-preview h2 {
+.login h2 {
   font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
+  display: block;
 }
-.user-preview a{
-  text-decoration: none;
+.login p {
+  font-size: 15px;
+  color: #f20606;
+  display: block;
+  margin-bottom: 10px;
+}
+.login input {
+  position: relative;
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.login button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+.login-toggle-button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-131%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 8px;
+  border-radius: 10px;
+}
+.create-user-button {
+  position: inherit;
+  right: -10px;
+  top: 0px;
+  margin: auto;
+}
+.login-password-input-container {
+  position: relative;
+  width: 100%;
+}
+.error {
+  width: 100%;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f20606;
 }
 
 /* create new user form */
 .create-user {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 300px;
+  margin: 100px auto 0 auto;
   text-align: center;
 }
 .create-user label {
@@ -113,59 +138,106 @@ code {
   border-radius: 10px;
 }
 
-/* login form */
-.login {
-  max-width: 400px;
+/* navbar */
+.navbar {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  max-width: 1300px;
   margin: 0 auto;
-  text-align: center;
-  margin-top: 120px;
+  border-bottom: 1px solid #f2f2f2;
 }
-.login label {
-  text-align: left;
-  display: block;
+.navbar h1 {
+  color: #f1356d;
 }
-.login h2 {
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 5px;
+}
+
+/* admin navbar */
+.admin-navbar {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.admin-navbar h1 {
+  color: #f1356d;
+}
+.admin-navbar .links {
+  margin-left: auto;
+}
+.admin-navbar a {
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 6px;
+}
+.admin-navbar a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 5px;
+}
+
+/* user previews / list */
+.user-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.user-preview:hover {
+  box-shadow: 1px 3px 15px rgba(187, 7, 7, 0.211);
+}
+.user-preview h2 {
   font-size: 20px;
-  display: block;
+  color: #f1356d;
+  margin-bottom: 8px;
 }
-.login p {
-  font-size: 15px;
-  color: #f20606;
-  display: block;
-  margin-bottom: 10px;
+.user-preview a{
+  text-decoration: none;
 }
-.login input {
-  position: relative;
-  width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
+
+/* user list pagination */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }
-.login button {
-  background: #f1356d;
+.pagination li {
+  margin: 0 5px; 
+}
+.pagination button {
+  padding: 5px 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.pagination button:hover {
+  background-color: #ddd;
+}
+.active button {
+  background-color: #007bff;
   color: #fff;
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
 }
-.login-toggle-button {
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-131%);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 8px;
-  border-radius: 10px;
-}
-.login-password-input-container {
-  position: relative;
-  width: 100%;
-}
+
 
 /* logout confirmation dialog */
 .confirmation-dialog {
@@ -201,28 +273,4 @@ code {
 }
 .user-preview p {
   color: #f20606
-}
-
-/* user list pagination */
-.pagination {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-.pagination li {
-  margin: 0 5px; 
-}
-.pagination button {
-  padding: 5px 10px;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-.pagination button:hover {
-  background-color: #ddd;
-}
-.active button {
-  background-color: #007bff;
-  color: #fff;
 }
