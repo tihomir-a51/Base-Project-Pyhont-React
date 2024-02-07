@@ -98,7 +98,7 @@ async def create_user(db: Session, schema: UserCreate) -> UserModelType:
     }
 
 
-def get_data_db(db: Session, db_tables, filters=1) -> List[DbUsers]:
+async def get_data_db(db: Session, db_tables, filters=1) -> List[DbUsers]:
     """
     Retrieve data from the specified database tables with optional filters.
 

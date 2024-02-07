@@ -35,9 +35,9 @@ async def create_user_admin(
 
 
 @router.get("/users", response_model=List[UserDisplay])
-def get_users(
+async def get_users(
     db: Annotated[Session, Depends(get_db)],
-    current_user: Annotated[DbUsers, Depends(get_current_user)],
+    _: Annotated[DbUsers, Depends(get_current_user)],
 ):
     """
     Retrieve a list of verified and active users.
@@ -56,7 +56,7 @@ def get_users(
     tables = [DbUsers]
     filters = [DbUsers.is_verified == True, DbUsers.is_deleted == False]
 
-    return crud_user.get_data_db(db, tables, filters)
+    return await crud_user.get_data_db(db, tables, filters)
 
 
 @router.delete("/users/{user_to_delete}", status_code=204)
